@@ -15,6 +15,8 @@
  */
 package org.apache.ibatis.cache.decorators;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -131,6 +133,11 @@ public class TransactionalCache implements Cache {
             + "Consider upgrading your cache adapter to the latest version. Cause: " + e);
       }
     }
+  }
+
+  public static void main(String[] args) {
+    BufferedInputStream bufferedInputStream = new BufferedInputStream(null);
+    new DataInputStream(bufferedInputStream);
   }
 
 }
