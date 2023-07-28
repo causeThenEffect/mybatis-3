@@ -28,6 +28,7 @@ public class InterceptorChain {
 
   public Object pluginAll(Object target) {
     for (Interceptor interceptor : interceptors) {
+      // 生成一个新的代理类
       target = interceptor.plugin(target);
     }
     return target;
